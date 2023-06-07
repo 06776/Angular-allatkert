@@ -1,0 +1,32 @@
+<div class="row my-3 text-center font-weight-bold">
+    <div *ngFor="let o of oszlopok" class="col">
+        {{o}}
+    </div>
+    <div class="col">
+        Műveletek
+    </div>
+</div>
+<div class="row">
+    <div *ngFor="let o of oszlopok" class="col">
+        <input type="text" [(ngModel)]="ujEmployee[o]" class="form-control">
+    </div>
+    <div class="col">
+        <button type="button" class="btn btn-warning">Hozzáadás</button>
+    </div>
+</div>
+<div *ngFor="let dolgozo of employee" class="row my-2">
+    <div *ngFor="let o of oszlopok" class="col">
+        <!-- {{allat[o]}} -->
+        <input type="text" [(ngModel)]="dolgozo[o]" class="form-control">
+    </div>
+    <div class="col">
+        <div class="row">
+            <div class="col-6">
+                <button type="button" class="btn btn-warning">Módosítás</button>
+            </div>
+            <div class="col-6">
+                <button type="button" class="btn btn-danger">Törlés</button>
+            </div>
+        </div>
+    </div>
+</div>
